@@ -2,7 +2,127 @@
 *{
     border: 0px;
     margin: 0px;
+    padding: 0;
     box-sizing: border-box;
 }
+/* #endregion RESET */
 
-/* #endregion */
+/* #region DEBUG */
+/* .row, .col, .flex{
+    border: 1px dashed black;
+}
+
+.col > *,  .flex > *{
+    border: 1px dashed red;
+} */
+
+body{
+    background-color: aquamarine;
+}
+/* #endregion DEBUG */
+
+/* #region LAYOUT */
+.container-almostfluid{
+    max-width: 1500px;
+    padding: 0px 10px;
+}
+
+.container-xl{
+    max-width: 1140px;
+}
+.container-lg{
+    max-width: 960px;
+}
+
+[class^="container"]{
+    margin: 0px auto;
+}
+
+.row{
+    display: flex;
+}
+/* #endregion LAYOUT */
+
+/* #region GENERAL */
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex{
+    display: flex;
+}
+/* #endregion GENERAL */
+
+/* #region BUTTONS */
+[type="button"]{
+    cursor: pointer;
+}
+
+.btn--base{
+    padding: 4px 8px;
+}
+
+.btn--hollow{
+    background-color: transparent;
+}
+
+.btn--fixed{
+    width: n;
+}
+
+.btn--solid{
+    background-color: #0061FF;
+    color: white;
+}
+
+.btn--solid:active{
+    background-color: #0141a8;
+}
+
+/* #endregion BUTTONS */
+
+/* #region HEADER */
+header{
+    position: sticky;
+    background-color: white;
+    padding: 20px 0px;
+    font-size: clamp(10px, 2vw, 13px);
+    white-space: nowrap;
+}
+
+header .col, header .flex{
+    align-items: center;
+}
+
+header .row{
+    justify-content: space-between;
+}
+
+header li{
+    margin: 0px 10px;
+}
+
+header li:hover{
+    font-weight: 600;
+    box-shadow: 0px 1px #0061FF;
+    transition: 0.2s;
+}
+
+header [src*="logo"]{
+    width: clamp(60px, 10vw, 100px);
+}
+
+ul.flex{
+    flex-wrap: wrap;
+    margin: 0px 15px;
+}
+
+/* #endregion HEADER */
