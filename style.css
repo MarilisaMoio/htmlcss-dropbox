@@ -437,4 +437,18 @@ hr{
     padding-left: 10px;
     padding-right: 10px;
 }
+
+/* op */
+#op .row{
+    gap: var(--col-gap)
+}
+
+.CardOp-img{
+    width: 100%;
+}
+
+#op .col-33g{
+    min-width: 160px;
+}
+
 /* #endregion MAIN */
