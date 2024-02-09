@@ -8,17 +8,17 @@
 /* #endregion RESET */
 
 /* #region DEBUG */
-/* .row, .col, .flex{
+.row, .flex{
     border: 1px dashed black;
 }
 
-.col > *,  .flex > *{
+.row > *,  .flex > *{
     border: 1px dashed red;
 }
 
 body{
     background-color: aquamarine;
-} */
+}
 /* #endregion DEBUG */
 
 /* #region LAYOUT */
@@ -45,6 +45,10 @@ body{
 
 .col-33{
     width: calc(100% / 3 - var(--col-gap));
+}
+
+.col-60{
+    width: 60%;
 }
 
 .col-70{
@@ -88,6 +92,10 @@ a{
 
 .wrap{
     flex-wrap: wrap;
+}
+
+.grow{
+    flex-grow: 1;
 }
 /* #endregion GENERAL */
 
@@ -286,6 +294,7 @@ main [class^="col"]{
 
 .PlanCard{
     border: 1px solid rgb(190, 190, 190);
+    height: 100%;
 }
 
 .PlanCard-type{
@@ -325,6 +334,13 @@ main [class^="col"]{
     margin-right: 7px;
 }
 
+.multi-user::before{
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    content: "\f500";
+    margin-right: 7px;
+}
+
 .space::before{
     font-family: "Font Awesome 6 Free";
     font-weight: bold;
@@ -352,7 +368,8 @@ main [class^="col"]{
 }
 
 .PlanCard-btn{
-    max-width: 228px;
+    width: 100%;
+    max-width: 226px;
 }
 
 .PlanCard-buy{
@@ -371,4 +388,15 @@ hr{
     border-style: inset;
 }
 
+.PlanCard--var{
+    flex-direction: row;
+}
+
+.PlanCard--var button{
+    align-self: flex-start;
+}
+
+.PlanCard-solutions{
+    margin: clamp(20px, 3vw, 40px) 0px;
+}
 /* #endregion MAIN */
