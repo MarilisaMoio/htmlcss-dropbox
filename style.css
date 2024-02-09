@@ -16,6 +16,10 @@
     border: 1px dashed red;
 }
 
+section{
+    border: 1px dashed green;
+}
+
 body{
     background-color: aquamarine;
 }
@@ -43,8 +47,12 @@ body{
     width: 30%;
 }
 
-.col-33{
+.col-33g{
     width: calc(100% / 3 - var(--col-gap));
+}
+
+.col-40{
+    width: 40%;
 }
 
 .col-60{
@@ -82,6 +90,10 @@ a{
     color: inherit;
 }
 
+section{
+    padding: 50px 0px;
+}
+
 .flex{
     display: flex;
 }
@@ -110,7 +122,8 @@ h2{
 }
 
 h3{
-    font-size: clamp(15px, 3vw, 25px);
+    font-size: clamp(15px, 3vw, 22px);
+    margin: clamp(8px, 2vw, 13px) 0px;
 }
 
 /* #endregion TYPOGRAPHY */ 
@@ -284,7 +297,7 @@ main [class^="col"]{
     gap: var(--col-gap);
 }
 
-#plans .col-33{
+#plans .col-33g{
     min-width: 180px;
 }
 
@@ -308,10 +321,6 @@ main [class^="col"]{
     padding: 0px clamp(10px, 4vw, 30px);
     flex-direction: column;
     
-}
-
-.PlanCard-name{
-    margin: clamp(8px, 2vw, 13px) 0px;
 }
 
 .PlanCard-price{
@@ -398,5 +407,25 @@ hr{
 
 .PlanCard-solutions{
     margin: clamp(20px, 3vw, 40px) 0px;
+}
+
+/* partner */
+.partners img{
+    width: 100%;
+}
+
+.partners .col-60{
+    align-self: center;
+    min-width: 350px;
+}
+
+.partners .col-40{
+    padding: clamp(20px, 5vw, 40px);
+}
+
+.partners button{
+    margin: clamp(20px, 3vw, 40px) 0px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 /* #endregion MAIN */

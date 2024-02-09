@@ -10,3 +10,5 @@
 ### References ###
 - [Bootstrap's max-width](https://getbootstrap.com/docs/5.0/layout/containers/) breakpoints for `.containers`.
 
+### Considerations ###
+- Under 430px in width, everything goes crashing down; otherwise, it adaps decently. Safe with an iPhone 15 Pro Max, tho! 
