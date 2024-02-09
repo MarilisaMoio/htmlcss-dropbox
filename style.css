@@ -8,7 +8,7 @@
 /* #endregion RESET */
 
 /* #region DEBUG */
-.row, .col, .flex{
+/* .row, .col, .flex{
     border: 1px dashed black;
 }
 
@@ -18,7 +18,7 @@
 
 body{
     background-color: aquamarine;
-}
+} */
 /* #endregion DEBUG */
 
 /* #region LAYOUT */
@@ -39,24 +39,36 @@ body{
     padding: 0px 10px;
 }
 
-.row{
-    display: flex;
-}
-
 .col-30{
     width: 30%;
+}
 
+.col-33{
+    width: calc(100% / 3 - var(--col-gap));
 }
 
 .col-70{
     width: 70%;
 }
+
+.col-100{
+    width: 100%;
+}
 /* #endregion LAYOUT */
 
 /* #region GENERAL */
+:root{
+    --col-gap: 35px
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
 ul, ol{
     list-style: none;
 }
@@ -70,34 +82,61 @@ a{
     display: flex;
 }
 
+.row{
+    display: flex;
+}
+
 .wrap{
     flex-wrap: wrap;
 }
 /* #endregion GENERAL */
 
+/* #region TYPOGRAPHY */
+h1{
+    font-weight: 800;
+    font-size: clamp(35px, 5vw, 70px);
+    padding: 30px 0px;
+}
+h2{
+    font-size: clamp(20px, 4vw, 40px);
+}
+
+h3{
+    font-size: clamp(15px, 3vw, 25px);
+}
+
+/* #endregion TYPOGRAPHY */ 
+
 /* #region BUTTONS */
 [type="button"]{
     cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
+    font-family: inherit;
     font-size: inherit;
 }
 
-.btn--base{
+.btn--thin{
     padding: 4px 8px;
+}
+
+.btn--thick{
+    padding: 10px 8px;
 }
 
 .btn--hollow{
     background-color: transparent;
+    border: 1px solid black;
 }
 
-.btn--fixed{
-    width: n;
-}
-
-.btn--solid{
+.btn--solid--main{
     background-color: #0061FF;
     color: white;
 }
+
+.btn--solid--var{
+    background-color: white;
+    color: black;
+}
+
 
 .btn--solid:active{
     background-color: #0141a8;
@@ -144,7 +183,7 @@ ul.flex{
 
 /* #region MAIN */
 main{
-    font-size: clamp(12px, 2vw, 16px);;
+    font-size: clamp(12px, 2vw, 16px);
 }
 
 main > section:not(.banner){
@@ -162,12 +201,6 @@ main [class^="col"]{
 /* hero */
 #hero{
     position: relative;
-}
-
-h1{
-    font-weight: 800;
-    font-size: clamp(35px, 5vw, 70px);
-    padding: 30px 0px;
 }
 
 #hero .flex{
@@ -195,7 +228,7 @@ h1{
 #hero i{
     font-size: 60px;
     position: absolute;
-    bottom: 50px;
+    bottom: 55px;
     left: 14px;
 }
 
@@ -222,8 +255,120 @@ h1{
     }
 }
 
-/* colonnine */
+/* business plans */
 .heroside{
-    padding-top: 70px;
+    padding-top: clamp(30px, 10vw, 70px);
 }
+
+#plans h2{
+    margin-bottom: clamp(14px, 4vw, 30px);
+}
+
+.radio-billing{
+    margin: clamp(25px, 4vw, 40px) 0px;
+}
+
+.radio-billing > *{
+    margin-right: 20px;
+}
+
+#plans .row{
+    gap: var(--col-gap);
+}
+
+#plans .col-33{
+    min-width: 180px;
+}
+
+.PlanCard-btn{
+    max-width: 228px;
+}
+
+.PlanCard{
+    border: 1px solid rgb(190, 190, 190);
+}
+
+.PlanCard-type{
+    border-bottom: 1px solid rgb(190, 190, 190);
+    text-align: center;
+    padding: 8px 3px;
+    margin-bottom: clamp(14px, 4vw, 20px);
+}
+
+.PlanCard-content{
+    padding: 0px clamp(10px, 4vw, 30px);
+    flex-direction: column;
+    
+}
+
+.PlanCard-name{
+    margin: clamp(8px, 2vw, 13px) 0px;
+}
+
+.PlanCard-price{
+    font-weight: 700;
+    margin: 5px 0px;
+}
+
+.PlanCard-recurrence{
+    color: gray;
+}
+
+.PlanCard-characteristics{
+    margin: clamp(15px, 4vw, 35px) 0px;
+}
+
+.single-user::before{
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    content: "\f007";
+    margin-right: 7px;
+}
+
+.space::before{
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    content: "\f07b";
+    margin-right: 7px;
+}
+
+.functions::before{
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    content: "\f1e0";
+    margin-right: 7px;
+}
+
+.PlanCard li{
+    margin: 20px 0px;
+}
+
+.PlanCard-checks li::before{
+    font-family: "Font Awesome 6 Free";
+    content: "\f00c";
+    font-weight: bold;
+    color: #0061FF;
+    margin-right: 7px;
+}
+
+.PlanCard-btn{
+    max-width: 228px;
+}
+
+.PlanCard-buy{
+    margin-top: clamp(8px, 3vw, 20px);
+}
+
+.PlanCard-buy a{
+    color: blue;
+    text-decoration: underline;
+}
+
+hr{
+    margin: clamp(20px, 3vw, 40px) 0px;
+    width: 20%;
+    border-width: 1px;
+    border-style: inset;
+}
+
 /* #endregion MAIN */

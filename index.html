@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Dropbox</title>
     <link rel="icon" type="image/x-icon" href="Dropbox_icon-icons.com_66767.ico">
@@ -34,7 +34,7 @@
                             <li><a href="#">Accedi</a></li>
                         </ul>
                     </nav>
-                    <button type="button" class="btn--base btn--solid">Inizia</button>
+                    <button type="button" class="btn--thin btn--solid--main">Inizia</button>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                 <div class="row wrap">
                     <div class="col-30">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique eum aperiam, cum tenetur perspiciatis magnam qui maxime, nisi corporis illum, atque rerum! Alias inventore totam quam dolorum corrupti vel soluta!</p>
-                        <button type="button" class="btn--base btn--solid">Inizia la tua prova gratuita</button>
+                        <button type="button" class="btn--thick btn--solid--main">Inizia la tua prova gratuita</button>
                         <div>Annulla in qualsiasi momento</div>
                         <i class="fa-solid fa-arrow-down"></i>
                     </div>
@@ -58,8 +58,61 @@
                 </div>
             </div>
         </section>
-        <section class="heroside">
-            AOOOOOOOOOOOOOOOOOOO
+        <section class="heroside" id="plans">
+            <div class="container-lg">
+                <h2>Trova il piano business che fa per te</h2>
+                <div class="radio-billing flex">
+                    <div class="monthlybilling">
+                        <input type="radio" name="billing" id="monthly">
+                        <label for="monthly">Fatturazione mensile</label>
+                    </div>
+                    <div class="yearlybilling">
+                        <input type="radio" name="billing" id="yearly">
+                        <label for="yearly">Fatturazione annuale</label>
+                    </div>
+                </div>
+                <div class="row wrap">
+                    <div class="col-33">
+                        <div class="PlanCard">
+                            <div class="PlanCard-type"><i class="fa-solid fa-user"></i> Singolo</div>
+                            <div class="PlanCard-content flex">
+                                <h3 class="PlanCard-name">Professional</h3>
+                                <div class="PlanCard-price">&euro; 12.00</div>
+                                <div class="PlanCard-recurrence">/mese</div>
+                                <ul class="PlanCard-characteristics">
+                                    <li class="single-user">1 utente</li>
+                                    <li class="space">5 TB di spazio di archiviazione sicuro</li>
+                                    <li class="functions">Funzioni di produttività premium e condivisione di file semplice e sicura</li>
+                                </ul>
+                                <button type="button" class="PlanCard-btn btn--solid--main btn--thick">Prova gratis per 30 giorni</button>
+                                <div class="PlanCard-buy">oppure <a href="#">acquista ora</a></div>
+                                <hr>
+                                <h4>Punti salienti del piano</h4>
+                                <ul class="PlanCard-checks">
+                                    <li>Invia file fino a 100 GB con Dropbox Transfer</li>
+                                    <li>Cartelle offline su dispositivi mobili</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-33">
+                        <div class="PlanCard">
+                            <div class="PlanCard-type"><i class="fa-solid fa-user"></i> Singolo</div>
+                            <div class="PlanCard-content flex">
+                                <h3 class="PlanCard-name">Professional</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-33">
+                        <div class="PlanCard">
+                            <div class="PlanCard-type"><i class="fa-solid fa-user"></i> Singolo</div>
+                            <div class="PlanCard-content flex">
+                                <h3 class="PlanCard-name">Professional</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>
