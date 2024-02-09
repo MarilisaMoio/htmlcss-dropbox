@@ -8,13 +8,13 @@
 /* #endregion RESET */
 
 /* #region DEBUG */
-/* .row, .col, .flex{
+.row, .col, .flex{
     border: 1px dashed black;
 }
 
 .col > *,  .flex > *{
     border: 1px dashed red;
-} */
+}
 
 body{
     background-color: aquamarine;
@@ -160,6 +160,10 @@ main [class^="col"]{
 }
 
 /* hero */
+#hero{
+    position: relative;
+}
+
 h1{
     font-weight: 800;
     font-size: clamp(35px, 5vw, 70px);
@@ -172,7 +176,7 @@ h1{
 
 #hero button{
     padding: 6px 14px;
-    margin: clamp(6px, 5vw, 26px) 0px;
+    margin: clamp(12px, 5vw, 26px) 0px;
 }
 
 [src*="jumbo"]{
@@ -183,14 +187,44 @@ h1{
     min-width: 350px;
 }
 
-#hero .row.wrap{
-    align-items: flex-start;
-    align-content: flex-start;
-}
-
 #hero .container-xl{
     position: relative;
     top: 50px
 }
 
+#hero i{
+    font-size: 60px;
+    position: absolute;
+    bottom: 50px;
+    left: 14px;
+}
+
+@media screen and (max-width: 960px){
+    #hero i{
+        left: -60px;
+        transition: 0.4s;
+    }
+}
+
+@media screen and (min-width: 960px){
+    #hero i{
+        transition: 0.3s;
+    }
+}
+
+@media screen and (max-width: 530px){
+    #hero .container-xl{
+        position: static;
+    }
+
+    [src*="jumbo"]{
+        position: relative;
+        bottom: -30px
+    }
+}
+
+/* colonnine */
+.heroside{
+    padding-top: 70px;
+}
 /* #endregion MAIN */
