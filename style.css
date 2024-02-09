@@ -118,7 +118,8 @@ h1{
     padding: 30px 0px;
 }
 h2{
-    font-size: clamp(20px, 4vw, 40px);
+    font-size: clamp(25px, 4vw, 40px);
+    margin-bottom: clamp(18px, 4vw, 50px);
 }
 
 h3{
@@ -290,9 +291,6 @@ main [class^="col"]{
     padding-top: clamp(30px, 10vw, 70px);
 }
 
-#plans h2{
-    margin-bottom: clamp(14px, 4vw, 30px);
-}
 
 .radio-billing{
     margin: clamp(25px, 4vw, 40px) 0px;
@@ -450,5 +448,13 @@ hr{
 #op .col-33g{
     min-width: 160px;
 }
+
+ /* clients */
+.clients a{
+    text-decoration: underline;
+    color: blue;
+}
+
+/* CONTROLLA LA HERO!! */
 
 /* #endregion MAIN */
