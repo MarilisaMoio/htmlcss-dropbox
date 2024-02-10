@@ -268,14 +268,14 @@ main [class^="col"]{
     left: 14px;
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1000px){
     #hero i{
         left: -60px;
         transition: 0.4s;
     }
 }
 
-@media screen and (min-width: 960px){
+@media screen and (min-width: 1000px){
     #hero i{
         transition: 0.3s;
     }
