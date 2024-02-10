@@ -91,7 +91,8 @@ a{
 }
 
 section:not(#hero){
-    padding: 50px 0px;
+    padding-top: clamp(40px, 12vw, 70px);
+    padding-bottom: clamp(10px, 4vw, 20px);
 }
 
 .flex{
@@ -118,7 +119,7 @@ h1{
     margin-bottom: clamp(18px, 4vw, 50px);
 }
 h2{
-    font-size: clamp(25px, 4vw, 40px);
+    font-size: clamp(25px, 4vw, 37px);
     margin-bottom: clamp(18px, 4vw, 50px);
 }
 
@@ -160,8 +161,12 @@ h3{
 }
 
 
-.btn--solid:active{
+.btn--solid--main:active{
     background-color: #0141a8;
+}
+
+.btn--hollow:active{
+    background-color: rgba(166, 165, 165, 0.5);
 }
 
 /* #endregion BUTTONS */
@@ -253,13 +258,13 @@ main [class^="col"]{
 
 #hero .container-xl{
     position: relative;
-    top: 50px
+    top: 60px
 }
 
 #hero i{
     font-size: 60px;
     position: absolute;
-    bottom: 55px;
+    bottom: 65px;
     left: 14px;
 }
 
@@ -289,7 +294,7 @@ main [class^="col"]{
 
 /* business plans */
 .heroside{
-    padding-top: clamp(30px, 10vw, 70px);
+    padding-top: clamp(40px, 12vw, 80px);
 }
 
 
@@ -411,6 +416,7 @@ hr{
 
 .PlanCard--var button{
     align-self: flex-start;
+    margin-bottom: 25px;
 }
 
 .PlanCard-solutions{
@@ -456,6 +462,8 @@ hr{
     color: blue;
 }
 
-/* CONTROLLA LA HERO!! */
+section.clients{
+    padding: clamp(40px, 12vw, 120px) 0px !important; /* ! trova soluzione meno drastica */
+}
 
 /* #endregion MAIN */
