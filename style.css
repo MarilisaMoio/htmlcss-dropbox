@@ -90,7 +90,7 @@ a{
     color: inherit;
 }
 
-section:not(#hero){
+section:not(#hero, .clients, .affiliate){
     padding-top: clamp(40px, 12vw, 70px);
     padding-bottom: clamp(10px, 4vw, 20px);
 }
@@ -107,8 +107,8 @@ section:not(#hero){
     flex-wrap: wrap;
 }
 
-.grow{
-    flex-grow: 1;
+.nogrow{
+    flex-grow: 0 !important; /* qui è onesto */
 }
 /* #endregion GENERAL */
 
@@ -253,12 +253,18 @@ main [class^="col"]{
 }
 
 #hero .col-70{
-    min-width: 350px;
+    min-width: 600px;
+}
+
+@media screen and (max-width: 610px){
+    #hero .col-70{
+        min-width: 400px;
+    }
 }
 
 #hero .container-xl{
     position: relative;
-    top: 60px
+    top: clamp(25px, 5vw, 65px);
 }
 
 #hero i{
@@ -266,6 +272,10 @@ main [class^="col"]{
     position: absolute;
     bottom: 65px;
     left: 14px;
+}
+
+#hero .col-30 div{
+    padding-bottom: 30px;
 }
 
 @media screen and (max-width: 1000px){
@@ -278,17 +288,6 @@ main [class^="col"]{
 @media screen and (min-width: 1000px){
     #hero i{
         transition: 0.3s;
-    }
-}
-
-@media screen and (max-width: 520px){
-    #hero .container-xl{
-        position: static;
-        padding-top: clamp(18px, 4vw, 50px);
-    }
-    [src*="jumbo"]{
-        position: relative;
-        bottom: -30px
     }
 }
 
@@ -462,8 +461,103 @@ hr{
     color: blue;
 }
 
-section.clients{
-    padding: clamp(40px, 12vw, 120px) 0px !important; /* ! trova soluzione meno drastica */
+.clients{
+    padding: clamp(40px, 12vw, 120px) 0px;
+}
+
+/* affiliate */
+.affiliate .row{
+    justify-items: center;
+}
+.affiliate .col{
+    height: calc(100vw / 3 - 6px);
+    width: calc(100vw / 3 - 6px);
+    min-width: 281px;
+}
+
+.CardBlock{
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.affiliate img{
+    width: 50%;
+}
+
+.affiliate img:not(.CardBlock--big > *){
+    filter: invert(1);
+}
+
+.CardBlock--designit{
+    background-color: #A2D39B;
+    border: clamp(5px, 2vw, 20px) solid rgba(255, 255, 255, 0.5);
+}
+
+.CardBlock--arizona{
+    background-color: #61082B;
+}
+
+.CardBlock--florida{
+    background-color: #0093CE;
+}
+
+.CardBlock--topps{
+    background-color: #FF1C1C;
+}
+
+.CardBlock--wbr{
+    background-color: #D5001F;
+}
+
+.CardBlock--hearst{
+    background-color: #B4D0E7;
+}
+
+.CardBlock--lp{
+    background-color: #0D2481;
+}
+
+.CardBlock--cco{
+    background-color: #FFD830;
+}
+
+.CardBlock:hover{
+    border: clamp(5px, 2vw, 20px) solid rgba(255, 255, 255, 0.5);
+}
+
+.CardBlock--big{
+    padding: clamp(10px, 7vw, 50px);
+    font-size: 70%;
+    background-color: #F5F5F5;
+    max-height: 100%;
+}
+
+.CardBlock--big hr{
+    margin: clamp(10px, 2vw, 50px) 0px;
+    width: 35%;
+}
+
+.CardBlock--big div{
+    margin-top: clamp(15px, 3vw, 50px);
+}
+
+@media screen and (max-width: 850px){
+    .affiliate > .row > .col:nth-child(2){
+        order: 1;
+        width: 100%;
+        height: 50%;
+    }
+
+    .affiliate .minicards{
+        width: 50%;
+        height: 50vw;
+    }
+
+    .affiliate .col{
+        min-width: 100px;
+    }
 }
 
 /* #endregion MAIN */
