@@ -55,10 +55,6 @@ body{
     width: 40%;
 }
 
-.col-50{
-    width: 50%;
-}
-
 .col-60{
     width: 60%;
 }
@@ -83,6 +79,7 @@ html{
 
 body{
     font-family: 'Open Sans', sans-serif;
+    font-size: clamp(10px, 2vw, 13px)
 }
 
 ul, ol{
@@ -94,8 +91,8 @@ a{
     color: inherit;
 }
 
-section{
-    padding-top: clamp(40px, 12vw, 70px);
+section, footer{
+    padding-top: clamp(40px, 4vw, 70px);
     padding-bottom: clamp(10px, 4vw, 20px);
 }
 
@@ -142,11 +139,11 @@ h3{
 }
 
 .btn--thin{
-    padding: 4px 8px;
+    padding: 4px 10px;
 }
 
 .btn--thick{
-    padding: 10px 8px;
+    padding: 10px;
 }
 
 .btn--hollow{
@@ -169,6 +166,10 @@ h3{
     background-color: #0141a8;
 }
 
+.btn--solid--var:active{
+    background-color:  rgb(235, 235, 235);
+}
+
 .btn--hollow:active{
     background-color: rgba(166, 165, 165, 0.5);
 }
@@ -182,7 +183,6 @@ header{
     top: 0px;
     background-color: white;
     padding: 20px 0px;
-    font-size: clamp(10px, 2vw, 13px);
     white-space: nowrap;
     box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
 }
@@ -222,10 +222,6 @@ ul.flex{
 /* #endregion HEADER */
 
 /* #region MAIN */
-main{
-    font-size: clamp(12px, 2vw, 16px);
-}
-
 main > section:not(.banner){
     background-color: white;
 }
@@ -258,7 +254,7 @@ main [class^="col"]{
 }
 
 #hero .col-70{
-    min-width: 600px;
+    min-width: 500px;
 }
 
 @media screen and (max-width: 610px){
@@ -275,7 +271,7 @@ main [class^="col"]{
 #hero i{
     font-size: 60px;
     position: absolute;
-    bottom: 65px;
+    bottom: 12%;
     left: 14px;
 }
 
@@ -283,14 +279,14 @@ main [class^="col"]{
     padding-bottom: 30px;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 900px){
     #hero i{
         left: -60px;
         transition: 0.4s;
     }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 900px){
     #hero i{
         transition: 0.3s;
     }
@@ -627,4 +623,25 @@ hr{
     transition: 0.4s;
 }
 
+#faq{
+    padding: clamp(40px, 15vw, 150px) 0px;
+}
+
 /* #endregion MAIN */
+
+/* #region FOOTER */
+footer{
+    background-color: black;
+    color: white;
+}
+
+footer li{
+    margin: clamp(10px, 2vw, 15px) 0px;
+    font-size: inherit;
+}
+
+footer .row{
+    justify-content: space-between;
+}
+
+/* #endregion FOOTER */
