@@ -573,6 +573,10 @@ hr{
     padding: clamp(40px, 12vw, 120px) 0px;
 }
 
+.try .col:first-child{
+    max-width: 540px;
+}
+
 .try .row{
     justify-content: space-between;
     gap: 10px 60px;
@@ -580,10 +584,47 @@ hr{
 
 .Banner-btn{
     width: 250px;
+    margin: 10px 0px;
 }
 
 .try .col.flex{
     align-items: flex-start;
+}
+
+.banner h2{
+    margin: 0px
+}
+
+/* faq */
+.question{
+    padding: clamp(18px, 4vw, 50px) clamp(5px, 2vw, 10px);
+}
+
+#faq hr{
+    width: 100%;
+    margin: 0;
+}
+
+.question i{
+    padding-left: 5px;
+}
+
+.question p{
+    margin: 10px 0px;
+    display: none;
+}
+
+.question:hover p{
+    display: block
+}
+
+.question:hover i{
+    transform: rotate(180deg);
+    transition: 0.4s;
+}
+
+.question:not(:hover) i{
+    transition: 0.4s;
 }
 
 /* #endregion MAIN */
