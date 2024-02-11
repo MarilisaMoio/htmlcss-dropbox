@@ -43,8 +43,8 @@ body{
     padding: 0px 15px;
 }
 
-.col-30{
-    width: 30%;
+.col-27{
+    width: 27%;
 }
 
 .col-33g{
@@ -59,8 +59,8 @@ body{
     width: 60%;
 }
 
-.col-70{
-    width: 70%;
+.col-73{
+    width: 73%;
 }
 
 .col-100{
@@ -253,19 +253,13 @@ main [class^="col"]{
     width: 100%;
 }
 
-#hero .col-70{
-    min-width: 500px;
-}
-
-@media screen and (max-width: 610px){
-    #hero .col-70{
-        min-width: 400px;
-    }
+#hero .col-73{
+    min-width: 550px;
 }
 
 #hero .container-xl{
     position: relative;
-    top: clamp(25px, 5vw, 65px);
+    top: clamp(40px, 5vw, 65px);
 }
 
 #hero i{
@@ -275,8 +269,14 @@ main [class^="col"]{
     left: 14px;
 }
 
-#hero .col-30 div{
+#hero .col-27 div{
     padding-bottom: 30px;
+}
+
+@media screen and (max-width: 550px){
+    #hero .col-73{
+        min-width: 400px;
+    }
 }
 
 @media screen and (max-width: 900px){
@@ -296,7 +296,6 @@ main [class^="col"]{
 .heroside{
     padding-top: clamp(40px, 12vw, 80px);
 }
-
 
 .radio-billing{
     margin: clamp(25px, 4vw, 40px) 0px;
