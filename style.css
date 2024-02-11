@@ -97,7 +97,7 @@ hr{
 }
 
 section{
-    padding-top: clamp(40px, 5vw, 90px);
+    padding-top: clamp(40px, 6vw, 90px);
     padding-bottom: clamp(10px, 4vw, 20px);
 }
 
