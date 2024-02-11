@@ -43,8 +43,8 @@ body{
     padding: 0px 15px;
 }
 
-.col-27{
-    width: 27%;
+.col-30{
+    width: 30%;
 }
 
 .col-33g{
@@ -59,8 +59,8 @@ body{
     width: 60%;
 }
 
-.col-73{
-    width: 73%;
+.col-70{
+    width: 70%;
 }
 
 .col-100{
@@ -79,7 +79,7 @@ html{
 
 body{
     font-family: 'Open Sans', sans-serif;
-    font-size: clamp(10px, 2vw, 13px)
+    font-size: clamp(11px, 2vw, 14px);
 }
 
 ul, ol{
@@ -91,8 +91,13 @@ a{
     color: inherit;
 }
 
+hr{
+    border-width: 1px;
+    border-style: inset;
+}
+
 section{
-    padding-top: clamp(40px, 4vw, 70px);
+    padding-top: clamp(40px, 5vw, 90px);
     padding-bottom: clamp(10px, 4vw, 20px);
 }
 
@@ -253,7 +258,7 @@ main [class^="col"]{
     width: 100%;
 }
 
-#hero .col-73{
+#hero .col-70{
     min-width: 550px;
 }
 
@@ -269,32 +274,36 @@ main [class^="col"]{
     left: 14px;
 }
 
-#hero .col-27 div{
+#hero .col-30 div{
     padding-bottom: 30px;
 }
 
 @media screen and (max-width: 550px){
-    #hero .col-73{
+    #hero .col-70{
         min-width: 400px;
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 930px){
     #hero i{
         left: -60px;
         transition: 0.4s;
     }
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 930px){
     #hero i{
         transition: 0.3s;
     }
 }
 
 /* business plans */
+#plans{
+    font-size: clamp(10px, 1.8vw, 13px);
+}
+
 .heroside{
-    padding-top: clamp(40px, 12vw, 80px);
+    padding-top: clamp(40px, 12vw, 120px);
 }
 
 .radio-billing{
@@ -303,6 +312,10 @@ main [class^="col"]{
 
 .radio-billing > *{
     margin-right: 20px;
+}
+
+[type="radio"]{
+    accent-color: green;
 }
 
 #plans .row{
@@ -377,7 +390,11 @@ main [class^="col"]{
 }
 
 .PlanCard li{
-    margin: 20px 0px;
+    margin: clamp(10px, 3vw, 20px) 0px;
+}
+
+.PlanCard li:last-child{
+    margin-bottom: clamp(30px, 5vw, 50px);
 }
 
 .PlanCard-checks li::before{
@@ -402,11 +419,9 @@ main [class^="col"]{
     text-decoration: underline;
 }
 
-hr{
-    margin: clamp(20px, 3vw, 40px) 0px;
+.PlanCard hr{
     width: 20%;
-    border-width: 1px;
-    border-style: inset;
+    margin: clamp(20px, 3vw, 40px) 0px;
 }
 
 .PlanCard--var{
@@ -447,6 +462,10 @@ hr{
     gap: var(--col-gap)
 }
 
+#op h3{
+    margin-bottom: clamp(10px, 2vw, 25px)
+}
+
 .CardOp-img{
     width: 100%;
 }
@@ -462,7 +481,7 @@ hr{
 }
 
 .clients{
-    padding: clamp(40px, 12vw, 120px) 0px;
+    padding: clamp(40px, 12vw, 140px) 0px;
 }
 
 /* affiliate */
@@ -592,12 +611,11 @@ hr{
 
 /* faq */
 .question{
-    padding: clamp(18px, 4vw, 50px) clamp(5px, 2vw, 10px);
+    padding: clamp(18px, 4vw, 35px) clamp(5px, 2vw, 10px);
 }
 
 #faq hr{
     width: 100%;
-    margin: 0;
 }
 
 .question i{
@@ -641,6 +659,10 @@ footer li{
 
 footer .row{
     justify-content: space-between;
+}
+
+footer hr{
+    width: 10%;
 }
 
 .lists{
