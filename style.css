@@ -190,6 +190,7 @@ header{
     padding: 20px 0px;
     white-space: nowrap;
     box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+    font-size: clamp(10px, 1.8vw, 13px);
 }
 
 @media screen and (max-width: 900px){
@@ -650,6 +651,7 @@ main [class^="col"]{
 footer{
     background-color: black;
     color: white;
+    font-size: clamp(10px, 1.8vw, 13px);
 }
 
 footer li{
