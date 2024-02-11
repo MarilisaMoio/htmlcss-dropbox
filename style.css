@@ -91,7 +91,7 @@ a{
     color: inherit;
 }
 
-section, footer{
+section{
     padding-top: clamp(40px, 4vw, 70px);
     padding-bottom: clamp(10px, 4vw, 20px);
 }
@@ -614,7 +614,7 @@ hr{
 }
 
 .question:hover i{
-    transform: rotate(180deg);
+    transform: scaleY(-1);
     transition: 0.4s;
 }
 
@@ -641,6 +641,34 @@ footer li{
 
 footer .row{
     justify-content: space-between;
+}
+
+.lists{
+    padding: clamp(40px, 4vw, 70px) 0px;
+}
+
+.language{
+    padding: clamp(10px, 4vw, 20px) 0px;
+    color: #999999;
+}
+
+select{
+    background-color: transparent;
+    border: none;
+    color: #999999;
+}
+
+select:focus{
+    background-color: black;
+}
+
+option{
+    color: #999999;
+}
+
+label .fa-solid{
+    font-size: clamp(12px, 2vw, 15px);
+    margin-right: clamp(2px, 1vw, 5px);
 }
 
 /* #endregion FOOTER */
