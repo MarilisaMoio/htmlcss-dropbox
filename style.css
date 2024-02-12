@@ -616,27 +616,30 @@ main [class^="col"]{
     padding-left: 5px;
 }
 
-.question p{
-    margin: 10px 0px;
-    display: none;
-}
-
-.question:hover p{
-    display: block
-}
-
-.question:hover i{
-    transform: scaleY(-1);
-    transition: 0.4s;
-}
-
-.question:not(:hover) i{
-    transition: 0.4s;
-}
-
 #faq{
     padding: clamp(40px, 15vw, 150px) 0px;
 }
+
+summary{
+    position: relative;
+}
+
+.question i{
+    position: absolute;
+    padding: 3px;
+    top: 0px;
+    right: 0px;
+    transition: 0.4s;
+}
+
+details > summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+details[open] i{
+    transform: scaleY(-1);
+} 
 
 /* #endregion MAIN */
 
