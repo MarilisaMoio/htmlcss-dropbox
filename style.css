@@ -612,10 +612,6 @@ main [class^="col"]{
     width: 100%;
 }
 
-.question i{
-    padding-left: 5px;
-}
-
 #faq{
     padding: clamp(40px, 15vw, 150px) 0px;
 }
@@ -630,6 +626,10 @@ summary{
     top: 0px;
     right: 0px;
     transition: 0.4s;
+}
+
+.question p{
+    margin-top: clamp(10px, 3vw, 20px);
 }
 
 details > summary {
