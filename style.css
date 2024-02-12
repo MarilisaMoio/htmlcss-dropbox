@@ -266,6 +266,7 @@ main [class^="col"]{
 #hero .container-xl{
     position: relative;
     top: clamp(40px, 5vw, 65px);
+    max-height: 91vh; /* pro: zona azzurra finisce esattamente al bordo della viewport, contro: se uno rimpicciolisce la finestra dal basso si rompe un po'*/
 }
 
 #hero i{
@@ -494,8 +495,8 @@ main [class^="col"]{
     justify-items: center;
 }
 .affiliate .col{
-    height: calc(100vw / 3 - 6px);
-    width: calc(100vw / 3 - 6px);
+    height: calc(100vw / 3);
+    width: calc(100% / 3);
     min-width: 281px;
 }
 
@@ -553,7 +554,7 @@ main [class^="col"]{
 
 .CardBlock--big{
     padding: clamp(10px, 7vw, 50px);
-    font-size: 70%;
+    font-size: clamp(10px, 1vw, 14px);
     background-color: #F5F5F5;
     max-height: 100%;
 }
@@ -567,7 +568,7 @@ main [class^="col"]{
     margin-top: clamp(15px, 3vw, 50px);
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 856px){
     .affiliate > .row > .col:nth-child(2){
         order: 1;
         width: 100%;
