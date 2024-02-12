@@ -1,3 +1,5 @@
+@import url(flex.css);
+
 /* #region RESET */
 *{
     border: 0px;
@@ -100,22 +102,6 @@ section{
     padding-top: clamp(40px, 6vw, 90px);
     padding-bottom: clamp(10px, 4vw, 20px);
 }
-
-.flex{
-    display: flex;
-}
-
-.row{
-    display: flex;
-}
-
-.wrap{
-    flex-wrap: wrap;
-}
-
-.nogrow{
-    flex-grow: 0 !important; /* qui è onesto */
-}
 /* #endregion GENERAL */
 
 /* #region TYPOGRAPHY */
@@ -165,7 +151,6 @@ h3{
     background-color: white;
     color: black;
 }
-
 
 .btn--solid--main:active{
     background-color: #0141a8;
@@ -266,7 +251,7 @@ main [class^="col"]{
 #hero .container-xl{
     position: relative;
     top: clamp(40px, 5vw, 65px);
-    max-height: 91vh; /* pro: zona azzurra finisce esattamente al bordo della viewport, contro: se uno rimpicciolisce la finestra dal basso si rompe un po'*/
+    /*max-height: 91vh; pro: zona azzurra finisce esattamente al bordo della viewport, contro: se uno rimpicciolisce la finestra dal basso si rompe un po'*/
 }
 
 #hero i{

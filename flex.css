@@ -1,0 +1,15 @@
+.flex{
+    display: flex;
+}
+
+.row{
+    display: flex;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.nogrow{
+    flex-grow: 0 !important; /* qui è onesto */
+}
