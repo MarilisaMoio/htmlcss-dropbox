@@ -355,32 +355,26 @@ main [class^="col"]{
     margin: clamp(15px, 4vw, 35px) 0px;
 }
 
-.single-user::before{
+.PlanCard-characteristics li::before{
     font-family: "Font Awesome 6 Free";
     font-weight: bold;
-    content: "\f007";
     margin-right: 7px;
+}
+
+.single-user::before{
+    content: "\f007";
 }
 
 .multi-user::before{
-    font-family: "Font Awesome 6 Free";
-    font-weight: bold;
     content: "\f500";
-    margin-right: 7px;
 }
 
 .space::before{
-    font-family: "Font Awesome 6 Free";
-    font-weight: bold;
     content: "\f07b";
-    margin-right: 7px;
 }
 
 .functions::before{
-    font-family: "Font Awesome 6 Free";
-    font-weight: bold;
     content: "\f1e0";
-    margin-right: 7px;
 }
 
 .PlanCard li{
